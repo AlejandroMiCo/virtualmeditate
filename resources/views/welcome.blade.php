@@ -1,13 +1,28 @@
 @extends('layouts.app')
 
 @section('content')
-<img src="images/imagen_portada.webp" class="d-flex w-100">
-<div class="class=" container mt-5">
-    <div class="d-flex justify-content-center bg-white bg-opacity-10 rounded-3 shadow-lg flex-column content-box">
-        <p class="text-center fs-1 fw-bolder">Virtual meditate</p>
-        <h2 class="text-center fw-bold">A momento of calm in a world of hurry</h2>
+    <div class="d-flex justify-content-center align-items-center vh-100">
+        <img src="images/imagen_portada.webp" class="w-100 background-image vh-100">
+        <div
+            class="justify-content-center flex-column absolute-center text-center position-absolute top-10 start-50 translate-middle">
+            <p class="fw-bolder font sized-font">Virtual meditate</p>
+            <h2 class="fw-bold font">A moment of calm in a world of hurry</h2>
+        </div>
+
     </div>
-</div>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Syne+Mono&display=swap');
+        .font{
+            font-family: 'Eagle Lake', cursive;
+        }
 
+        .sized-font{
+            font-size: 6em;
+        }
 
+        main{
+            position: fixed;
+            width: 100%;
+        }
+    </style>
 @endsection

@@ -19,10 +19,10 @@
                     </div>
 
                     <div class="card-body bg-white">
-                        
+
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Categoria Id:</strong>
-                                    {{ $entorno->categoria_id }}
+                                    <strong>Categoria:</strong>
+                                    {{ $entorno->categoria->nombre }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
                                     <strong>Nombre:</strong>

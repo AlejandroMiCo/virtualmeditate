@@ -35,8 +35,8 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
-									<th >Categoria Id</th>
+
+									<th >Categoria</th>
 									<th >Nombre</th>
 									<th >Musica</th>
 
@@ -47,8 +47,8 @@
                                     @foreach ($entornos as $entorno)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
-										<td >{{ $entorno->categoria_id }}</td>
+
+										<td >{{ $entorno->categoria->nombre }}</td>
 										<td >{{ $entorno->nombre }}</td>
 										<td >{{ $entorno->musica }}</td>
 

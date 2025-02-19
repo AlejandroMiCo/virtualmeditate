@@ -16,11 +16,12 @@
                                 {{ __('Objetos') }}
                             </span>
 
-                             <div class="float-right">
-                                <a href="{{ route('objetos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                            <div class="float-right">
+                                <a href="{{ route('objetos.create') }}" class="btn btn-primary btn-sm float-right"
+                                    data-placement="left">
+                                    {{ __('Create New') }}
                                 </a>
-                              </div>
+                            </div>
                         </div>
                     </div>
                     @if ($message = Session::get('success'))
@@ -35,12 +36,12 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
-									<th >Nombre</th>
-									<th >Entorno Id</th>
-									<th >Dimensiones</th>
-									<th >Posicion</th>
-									<th >Color</th>
+
+                                        <th>Nombre</th>
+                                        <th>Entorno</th>
+                                        <th>Dimensiones</th>
+                                        <th>Posicion</th>
+                                        <th>Color</th>
 
                                         <th></th>
                                     </tr>
@@ -49,20 +50,26 @@
                                     @foreach ($objetos as $objeto)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
-										<td >{{ $objeto->nombre }}</td>
-										<td >{{ $objeto->entorno_id }}</td>
-										<td >{{ $objeto->dimensiones }}</td>
-										<td >{{ $objeto->posicion }}</td>
-										<td >{{ $objeto->color }}</td>
+
+                                            <td>{{ $objeto->nombre }}</td>
+                                            <td>{{ $objeto->entorno->nombre }}</td>
+                                            <td>{{ $objeto->dimensiones }}</td>
+                                            <td>{{ $objeto->posicion }}</td>
+                                            <td>{{ $objeto->color }}</td>
 
                                             <td>
                                                 <form action="{{ route('objetos.destroy', $objeto->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('objetos.show', $objeto->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('objetos.edit', $objeto->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                    <a class="btn btn-sm btn-primary "
+                                                        href="{{ route('objetos.show', $objeto->id) }}"><i
+                                                            class="fa fa-fw fa-eye"></i> {{ __('Show') }}</a>
+                                                    <a class="btn btn-sm btn-success"
+                                                        href="{{ route('objetos.edit', $objeto->id) }}"><i
+                                                            class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm" onclick="event.preventDefault(); confirm('Are you sure to delete?') ? this.closest('form').submit() : false;"><i class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"
+                                                        onclick="event.preventDefault(); confirm('Are you sure to delete?') ? this.closest('form').submit() : false;"><i
+                                                            class="fa fa-fw fa-trash"></i> {{ __('Delete') }}</button>
                                                 </form>
                                             </td>
                                         </tr>

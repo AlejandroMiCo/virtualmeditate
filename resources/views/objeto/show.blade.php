@@ -19,14 +19,14 @@
                     </div>
 
                     <div class="card-body bg-white">
-                        
+
                                 <div class="form-group mb-2 mb20">
                                     <strong>Nombre:</strong>
                                     {{ $objeto->nombre }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
-                                    <strong>Entorno Id:</strong>
-                                    {{ $objeto->entorno_id }}
+                                    <strong>Entorno:</strong>
+                                    {{ $objeto->entorno->nombre }}
                                 </div>
                                 <div class="form-group mb-2 mb20">
                                     <strong>Dimensiones:</strong>
