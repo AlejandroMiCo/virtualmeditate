@@ -22,7 +22,7 @@ class EntornoRequest extends FormRequest
     public function rules(): array
     {
         return [
-			'categoria_id' => 'required',
+			'categoria_id' => 'required|exists:categorias,id',
 			'nombre' => 'required|string',
 			'musica' => 'required|string',
         ];

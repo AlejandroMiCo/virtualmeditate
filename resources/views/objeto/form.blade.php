@@ -16,14 +16,14 @@
         </div>
         <div class="form-group mb-2 mb20">
             <label for="dimensiones" class="form-label">{{ __('Dimensiones') }}</label>
-            <input type="text" name="dimensiones" class="form-control @error('dimensiones') is-invalid @enderror"
-                value="{{ old('dimensiones', $objeto?->dimensiones) }}" id="dimensiones" placeholder="Dimensiones">
+            <input type="number" name="dimensiones" class="form-control @error('dimensiones') is-invalid @enderror"
+                value="{{ old('dimensiones', $objeto?->dimensiones) }}" id="dimensiones" placeholder="Dimensiones" min="1" step="1">
             {!! $errors->first('dimensiones', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">
             <label for="posicion" class="form-label">{{ __('Posicion') }}</label>
-            <input type="text" name="posicion" class="form-control @error('posicion') is-invalid @enderror"
-                value="{{ old('posicion', $objeto?->posicion) }}" id="posicion" placeholder="Posicion">
+            <input type="number" name="posicion" class="form-control @error('posicion') is-invalid @enderror"
+                value="{{ old('posicion', $objeto?->posicion) }}" id="posicion" placeholder="Posicion" min="1" step="1">
             {!! $errors->first('posicion', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!}
         </div>
         <div class="form-group mb-2 mb20">

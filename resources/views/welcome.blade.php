@@ -6,7 +6,7 @@
         <div
             class="justify-content-center flex-column absolute-center text-center position-absolute top-10 start-50 translate-middle">
             <p class="fw-bolder font sized-font">Virtual meditate</p>
-            <h2 class="fw-bold font">A moment of calm in a world of hurry</h2>
+            <h2 class="fw-bold font text-black-50">A moment of calm in a world of hurry</h2>
         </div>
 
     </div>
@@ -17,7 +17,7 @@
         }
 
         .sized-font{
-            font-size: 6em;
+            font-size: 6dvw;
         }
 
         main{

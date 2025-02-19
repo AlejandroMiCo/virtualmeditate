@@ -23,9 +23,9 @@ class ObjetoRequest extends FormRequest
     {
         return [
 			'nombre' => 'required|string',
-			'entorno_id' => 'required',
-			'dimensiones' => 'required',
-			'posicion' => 'required',
+			'entorno_id' => 'required|exists:entornos,id',
+			'dimensiones' => 'required|numeric|min:1',
+			'posicion' => 'required|numeric|min:1',
 			'color' => 'required|string',
         ];
     }

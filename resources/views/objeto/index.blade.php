@@ -5,11 +5,11 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid mt-4">
         <div class="row">
             <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-header">
+                <div class="card border-primary">
+                    <div class="card-header bg-primary">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
@@ -17,7 +17,7 @@
                             </span>
 
                             <div class="float-right">
-                                <a href="{{ route('objetos.create') }}" class="btn btn-primary btn-sm float-right"
+                                <a href="{{ route('objetos.create') }}" class="btn btn-outline-light btn-sm float-right"
                                     data-placement="left">
                                     {{ __('Create New') }}
                                 </a>
@@ -32,9 +32,9 @@
 
                     <div class="card-body bg-white">
                         <div class="table-responsive">
-                            <table class="table table-striped table-hover">
+                            <table class="table table-hover">
                                 <thead class="thead">
-                                    <tr>
+                                    <tr class="table-primary">
                                         <th>No</th>
 
                                         <th>Nombre</th>
@@ -48,7 +48,7 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($objetos as $objeto)
-                                        <tr>
+                                        <tr class="table-info">
                                             <td>{{ ++$i }}</td>
 
                                             <td>{{ $objeto->nombre }}</td>

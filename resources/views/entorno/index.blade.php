@@ -5,11 +5,11 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid">
+    <div class="container-fluid mt-4">
         <div class="row">
             <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-header">
+                <div class="card border-danger">
+                    <div class="card-header bg-danger">
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
@@ -17,7 +17,7 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('entornos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('entornos.create') }}" class="btn btn-outline-light btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
                               </div>
@@ -33,7 +33,7 @@
                         <div class="table-responsive">
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
-                                    <tr>
+                                    <tr class="table-danger border-3 border-dark">
                                         <th>No</th>
 
 									<th >Categoria</th>
@@ -45,7 +45,7 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($entornos as $entorno)
-                                        <tr>
+                                        <tr class="table-danger border-3 border-dark">
                                             <td>{{ ++$i }}</td>
 
 										<td >{{ $entorno->categoria->nombre }}</td>
