@@ -19,7 +19,6 @@
                     </div>
 
                     <div class="card-body bg-white">
-
                                 <div class="form-group mb-2 mb20">
                                     <strong>Nombre:</strong>
                                     {{ $objeto->nombre }}
@@ -40,7 +39,6 @@
                                     <strong>Color:</strong>
                                     {{ $objeto->color }}
                                 </div>
-
                     </div>
                 </div>
             </div>

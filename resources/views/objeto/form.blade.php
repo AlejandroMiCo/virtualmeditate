@@ -9,8 +9,6 @@
         </div>
         <div class="form-group mb-2 mb20">
             <label for="entorno_id" class="form-label">{{ __('Entorno Id') }}</label>
-            {{-- <input type="text" name="entorno_id" class="form-control @error('entorno_id') is-invalid @enderror" value="{{ old('entorno_id', $objeto?->entorno_id) }}" id="entorno_id" placeholder="Entorno Id">
-            {!! $errors->first('entorno_id', '<div class="invalid-feedback" role="alert"><strong>:message</strong></div>') !!} --}}
             {{ Form::select('entorno_id', $entorno, $objeto->entorno_id, ['class' => 'form-control' . ($errors->has('entorno_id') ? ' is-invalid' : ''), 'placeholder' => 'Entorno Id']) }}
             {!! $errors->first('entorno_id', '<div class="invalid-feedback">:message</div>') !!}
         </div>
